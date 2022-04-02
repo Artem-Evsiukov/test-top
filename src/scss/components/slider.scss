@@ -1,0 +1,214 @@
+.slider-thumbs {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+  overflow: hidden;
+}
+.slider-section {
+  position: relative;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.js-small {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+}
+.js-small .swiper-slide {
+  @media (min-width: 1024px) {
+    width: 240px !important;
+  }
+  @media (min-width: 1125px) {
+    width: 272px !important;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.js-big {
+  position: relative;
+}
+
+.js-big .swiper-slide {
+  height: 121vh;
+}
+.swiper-pagination {
+  opacity: 1;
+  @media (min-width: 1024px) {
+    opacity: 0;
+  }
+}
+.js-big .swiper-pagination-bullet-active {
+  background-color: $black !important;
+}
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  border: 1px solid $black;
+  border-radius: 50%;
+  opacity: 1 !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 74px !important;
+  height: 74px !important;
+  background-color: rgba(180, 187, 197, 1);
+
+  &::after {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: $white !important;
+  }
+}
+.swiper-button-next {
+  right: 0 !important;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+.swiper-button-prev {
+  left: 0 !important;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.6 !important;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 0.8rem;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 5.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-right: 1rem;
+    flex: none;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    @media (min-width: 1125px) {
+      font-size: 1.4rem;
+    }
+  }
+  &__text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    @media (min-width: 1125px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__cols {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 109vh;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 1024px) {
+      align-items: flex-start;
+      max-width: 667px;
+      margin-left: auto;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: 500px) {
+      flex-direction: row;
+    }
+  }
+  .slider-title {
+    font-size: 21px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+      font-size: 42px;
+    }
+  }
+  .slider-text {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    width: 156px;
+    height: 45px;
+  }
+  .btn-one {
+    background-color: $btn-color;
+    border: 1px solid transparent;
+    color: $white;
+    margin-bottom: 15px;
+    @media (min-width: 500px) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+  .btn-two {
+    border: 1px solid $black;
+  }
+}
